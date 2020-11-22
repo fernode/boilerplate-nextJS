@@ -1,17 +1,18 @@
 import React from 'react';
 import * as S from './styles';
 
-function Main() {
+function Main({
+  title = 'React avançado',
+  description = 'TypesCript, ReactJs, NextJs e Styled components',
+}) {
   return (
     <S.Wrapper>
       <S.Logo
         src="/img/logo.svg"
         alt="Imagem de um atomo e React Avançado escrito ao lado"
       />
-      <S.Title>React avançado</S.Title>
-      <S.Description>
-        Typescript, ReactJS, Nextjs e styled components
-      </S.Description>
+      <S.Title>{title}</S.Title>
+      <S.Description>{description}</S.Description>
       <S.Illustration
         src="/img/hero-illustration.svg"
         alt="Ilustração de um desenvolvedor de frente para uma tela com códigos"
